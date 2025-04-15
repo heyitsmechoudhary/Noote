@@ -6,8 +6,41 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4B69EE192DAE448900B0FDD8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B69EE182DAE448900B0FDD8 /* WidgetKit.framework */; };
+		4B69EE1B2DAE448900B0FDD8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B69EE1A2DAE448900B0FDD8 /* SwiftUI.framework */; };
+		4B69EE262DAE448B00B0FDD8 /* nooteWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4B69EE162DAE448900B0FDD8 /* nooteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B69EE242DAE448B00B0FDD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B32D2302D9141990079F623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B69EE152DAE448900B0FDD8;
+			remoteInfo = nooteWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B69EE2B2DAE448B00B0FDD8 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4B69EE262DAE448B00B0FDD8 /* nooteWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4B32D2382D9141990079F623 /* Noote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B69EE162DAE448900B0FDD8 /* nooteWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = nooteWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B69EE182DAE448900B0FDD8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4B69EE1A2DAE448900B0FDD8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -18,6 +51,21 @@
 			);
 			target = 4B32D2372D9141990079F623 /* Noote */;
 		};
+		4B69EE2A2DAE448B00B0FDD8 /* Exceptions for "nooteWidget" folder in "nooteWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4B69EE152DAE448900B0FDD8 /* nooteWidgetExtension */;
+		};
+		4B69EE2D2DAE48C800B0FDD8 /* Exceptions for "Noote" folder in "nooteWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				Utility/Constant.swift,
+			);
+			target = 4B69EE152DAE448900B0FDD8 /* nooteWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -25,8 +73,17 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				4B32D25C2D9143AE0079F623 /* Exceptions for "Noote" folder in "Noote" target */,
+				4B69EE2D2DAE48C800B0FDD8 /* Exceptions for "Noote" folder in "nooteWidgetExtension" target */,
 			);
 			path = Noote;
+			sourceTree = "<group>";
+		};
+		4B69EE1C2DAE448900B0FDD8 /* nooteWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4B69EE2A2DAE448B00B0FDD8 /* Exceptions for "nooteWidget" folder in "nooteWidgetExtension" target */,
+			);
+			path = nooteWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -39,6 +96,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4B69EE132DAE448900B0FDD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B69EE1B2DAE448900B0FDD8 /* SwiftUI.framework in Frameworks */,
+				4B69EE192DAE448900B0FDD8 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				4B32D23A2D9141990079F623 /* Noote */,
+				4B69EE1C2DAE448900B0FDD8 /* nooteWidget */,
+				4B69EE172DAE448900B0FDD8 /* Frameworks */,
 				4B32D2392D9141990079F623 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,8 +122,18 @@
 			isa = PBXGroup;
 			children = (
 				4B32D2382D9141990079F623 /* Noote.app */,
+				4B69EE162DAE448900B0FDD8 /* nooteWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4B69EE172DAE448900B0FDD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B69EE182DAE448900B0FDD8 /* WidgetKit.framework */,
+				4B69EE1A2DAE448900B0FDD8 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,10 +146,12 @@
 				4B32D2342D9141990079F623 /* Sources */,
 				4B32D2352D9141990079F623 /* Frameworks */,
 				4B32D2362D9141990079F623 /* Resources */,
+				4B69EE2B2DAE448B00B0FDD8 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4B69EE252DAE448B00B0FDD8 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				4B32D23A2D9141990079F623 /* Noote */,
@@ -83,6 +163,28 @@
 			productReference = 4B32D2382D9141990079F623 /* Noote.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4B69EE152DAE448900B0FDD8 /* nooteWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B69EE272DAE448B00B0FDD8 /* Build configuration list for PBXNativeTarget "nooteWidgetExtension" */;
+			buildPhases = (
+				4B69EE122DAE448900B0FDD8 /* Sources */,
+				4B69EE132DAE448900B0FDD8 /* Frameworks */,
+				4B69EE142DAE448900B0FDD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4B69EE1C2DAE448900B0FDD8 /* nooteWidget */,
+			);
+			name = nooteWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = nooteWidgetExtension;
+			productReference = 4B69EE162DAE448900B0FDD8 /* nooteWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -90,11 +192,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
+				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					4B32D2372D9141990079F623 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					4B69EE152DAE448900B0FDD8 = {
+						CreatedOnToolsVersion = 16.3;
 					};
 				};
 			};
@@ -113,12 +218,20 @@
 			projectRoot = "";
 			targets = (
 				4B32D2372D9141990079F623 /* Noote */,
+				4B69EE152DAE448900B0FDD8 /* nooteWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4B32D2362D9141990079F623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B69EE142DAE448900B0FDD8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +248,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4B69EE122DAE448900B0FDD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B69EE252DAE448B00B0FDD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B69EE152DAE448900B0FDD8 /* nooteWidgetExtension */;
+			targetProxy = 4B69EE242DAE448B00B0FDD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4B32D2492D91419B0079F623 /* Debug */ = {
@@ -315,6 +443,62 @@
 			};
 			name = Release;
 		};
+		4B69EE282DAE448B00B0FDD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D73J446VQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = nooteWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = nooteWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iiiion.Noote.nooteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B69EE292DAE448B00B0FDD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D73J446VQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = nooteWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = nooteWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iiiion.Noote.nooteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -332,6 +516,15 @@
 			buildConfigurations = (
 				4B32D24C2D91419B0079F623 /* Debug */,
 				4B32D24D2D91419B0079F623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B69EE272DAE448B00B0FDD8 /* Build configuration list for PBXNativeTarget "nooteWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B69EE282DAE448B00B0FDD8 /* Debug */,
+				4B69EE292DAE448B00B0FDD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
