@@ -72,6 +72,9 @@ struct ContentView: View {
                         Button(action: {
                             //some action
                             isDarkmode.toggle()
+                            playSound(name: "tap")
+                            hapticFeedback.notificationOccurred(.success)
+                            
                         }, label: {
                             Image(systemName: isDarkmode ? "moon.circle.fill" : "moon.circle")
                                 .font(.system(size: 24,weight: .semibold,design: .rounded))
@@ -85,6 +88,8 @@ struct ContentView: View {
                     //MARK: - NEW TASK BUTTON
                     Button(action: {
                         showNewTaskItem = true
+                        playSound(name: "ding")
+                        hapticFeedback.notificationOccurred(.success)
                     }, label: {
                         Image(systemName: "plus.circle")
                             .font(.system(size: 30,weight: .semibold,design: .rounded))

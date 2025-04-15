@@ -15,6 +15,13 @@ struct CheckBoxStyleView: ToggleStyle {
                 .font(.system(size: 30,weight: .semibold,design: .rounded))
                 .onTapGesture {
                     configuration.isOn.toggle()
+                    if configuration.isOn {
+                        playSound(name: "rise")
+                        hapticFeedback.notificationOccurred(.success)
+                    }else{
+                        playSound(name: "tap")
+                        hapticFeedback.notificationOccurred(.warning)
+                    }
                 }
             configuration.label
         }//: HSTACK

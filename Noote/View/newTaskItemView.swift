@@ -54,7 +54,8 @@ struct newTaskItemView: View {
                     .cornerRadius(10)
                 Button(action: {
                     addItem()
-                    
+                    playSound(name: "ding")
+                    hapticFeedback.notificationOccurred(.success)
                 } ,label: {
                     Spacer()
                     Text("SAVE")
@@ -62,6 +63,12 @@ struct newTaskItemView: View {
                     Spacer()
                 })
                 .disabled(isButtonDisabled)
+                .onTapGesture{
+                    if isButtonDisabled {
+                        playSound(name: "tap")
+                        hapticFeedback.notificationOccurred(.warning)
+                    }
+                }
                 .padding()
                 
                 .foregroundColor(.white)
